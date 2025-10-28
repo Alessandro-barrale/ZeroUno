@@ -3,7 +3,7 @@
         <t t-call="website.layout">
             <div class="container mt-5 text-center">
                 
-                <h2>Informazioni Ticket TEST</h2>
+                <h2>Informazioni Ticket</h2>
                 
                 <t t-if="token">
                     <p><strong>Nome e Cognome:</strong> <t t-esc="name"/></p>
