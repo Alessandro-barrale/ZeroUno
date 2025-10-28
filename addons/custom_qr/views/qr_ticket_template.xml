@@ -1,0 +1,24 @@
+<odoo>
+    <template id="qr_ticket_template" name="QR Ticket Info">
+        <t t-call="website.layout">
+            <div class="container mt-5 text-center">
+                
+                <h2>Informazioni Ticket TEST</h2>
+                
+                <t t-if="token">
+                    <p><strong>Nome e Cognome:</strong> <t t-esc="name"/></p>
+                    <p><strong>Dipartimento:</strong> <t t-esc="department"/></p>
+                    <p><strong>Data e Ora:</strong> <t t-raw="date_time"/></p>
+                    <p><strong>Numero Token:</strong> <t t-esc="token"/></p>
+                </t>
+                
+                <t t-else="">
+                    <div class="alert alert-danger" role="alert">
+                        <h3 t-esc="error or 'Si è verificato un errore generico.'"/>
+                    </div>
+                </t>
+                
+            </div>
+        </t>
+    </template>
+</odoo>
